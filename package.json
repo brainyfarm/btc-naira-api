@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && forever -m 5 start ./build/server/server.js",
+    "start": "node ./build/server/server.js",
     "build": "rimraf build/ && babel ./ --out-dir build/ --ignore ./node_modules",
     "start:dev": "babel-watch ./server/server.js"
   },
