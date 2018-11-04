@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./build/server/server.js",
     "build": "rimraf build/ && babel ./ --out-dir build/ --ignore ./node_modules",
-    "start:dev": "babel-watch ./server/server.js"
+    "start:dev": "babel-watch ./server/server.js",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
