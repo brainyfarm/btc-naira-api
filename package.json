@@ -1,0 +1,35 @@
+{
+  "name": "btc-naira-api",
+  "version": "1.0.0",
+  "description": "BTC Naira API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && forever -m 5 start ./build/server/server.js",
+    "build": "rimraf build/ && babel ./ --out-dir build/ --ignore ./node_modules",
+    "start:dev": "babel-watch ./server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-oakinseye/btc-naira-api.git"
+  },
+  "keywords": [],
+  "author": "Olawale Akinseye <brainyfarm@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-oakinseye/btc-naira-api/issues"
+  },
+  "homepage": "https://github.com/andela-oakinseye/btc-naira-api#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^2.0.7",
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "forever": "^0.15.3",
+    "morgan": "^1.9.1",
+    "rimraf": "^2.6.2"
+  }
+}
