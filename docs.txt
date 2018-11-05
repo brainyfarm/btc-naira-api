@@ -1,0 +1,21 @@
+Database Tables
+
+Transaction
+id type user_id pair qty price status date date_completed beneficiary_id wallet_id
+
+type: buy, sell
+
+status: pending, cancelled, failed, complete
+
+User
+id email firstname lastname phone bvn verified referrer 
+
+Beneficiary
+id user_id bank account_number account_name
+
+Wallet
+id user_id currency address 
+
+
+
+

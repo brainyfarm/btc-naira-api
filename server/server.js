@@ -9,7 +9,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
-
 app.get('/api/v1', (req, res) => {
   return res.json({
     message: "Welcome to BTC Naira API",
