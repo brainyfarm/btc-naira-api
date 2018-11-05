@@ -10,7 +10,7 @@ status: pending, cancelled, failed, complete
 User
 id email firstname lastname phone bvn verified referrer 
 
-Beneficiary
+Accounts
 id user_id bank account_number account_name
 
 Wallet
@@ -19,3 +19,18 @@ id user_id currency address
 
 
 
+USER API FEATURES
+- ADD NEW USER 
+- GET USER [email, id]
+  - User data
+  - Accounts
+  - Wallets
+  - Last 10 transactions
+- GET ALL REGISTERED USERS
+  - User Data
+- UPDATE USER DATA [Verification, ...etc]
+
+TRANSACTIONS
+- GET TRANSACTION [id]
+- GET ALL TRANSACTIONS
+- UPDATE TRANSACTION DATA
