@@ -25,6 +25,7 @@ GET `/beneficiaries/:user_id`
 {
   ... user beneficiaries (truncated for security)
 }
+```
 
 POST `/order`
 ```
