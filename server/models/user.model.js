@@ -53,7 +53,7 @@ const User = new mongoose.Schema({
     default: false,
   },
   hash: {
-    type: String
+    type: String,
   },
 }, {
   timestamps: {
