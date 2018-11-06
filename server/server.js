@@ -12,7 +12,7 @@ dotenv.config();
 const { log, error } = console;
 const app = express();
 const PORT = process.env.PORT;
-const MONGO_URI = process.env.MONGO_URI || 'localhost:27017/btc-naira';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/btc-naira';
 
 mongoose.Promise = global.Promise;
 
