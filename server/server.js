@@ -5,7 +5,9 @@ import logger from 'console';
 import express from 'express';
 import mongoose from 'mongoose';
 
+import Order from './routes/order.route';
 import User from './routes/user.route';
+
 
 dotenv.config();
 
@@ -32,7 +34,8 @@ app.get('/v1', (req, res) => {
 });
 
 app.use('/v1/users', User);
+app.use('/v1/orders', Order);
 
-app.listen(PORT, () => 
+app.listen(PORT, () =>
   logger.log(`Server running on ${PORT}`)
 );
