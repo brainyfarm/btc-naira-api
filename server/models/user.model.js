@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
 import md5 from 'md5';
+import mongoose from 'mongoose';
 
 /**
  * @todo
