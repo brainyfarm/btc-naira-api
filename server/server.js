@@ -18,7 +18,10 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/btc-naira'
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true }, () => {
+mongoose.connect(MONGO_URI, { 
+    useNewUrlParser: true, 
+    useCreateIndex: true, 
+  }, () => {
   log('Connection Successful');
 });
 
