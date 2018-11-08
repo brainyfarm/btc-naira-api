@@ -1,39 +1,32 @@
-export const createItem = (model, data) => {
-  const newEntryData = new model(data);
-   return new Promise((resolve, reject) => {
-      return newEntryData.save()
-        .then((instance) => resolve(instance))
-        .catch((error) => reject(error))
+import Account from '../models/account.model';
+import Order from '../models/order.model';
+import User from '../models/user.model';
+import Wallet from '../models/wallet.model';
+
+
+export const findUserIDByEmail = (email) => {
+  email = email.trim();
+  return new Promise((resolve, reject) => {
+    return User.findOne({ email }, '_id')
+      .then(user => resolve(user))
+      .catch(error => reject(error))
+    });
+}
+
+export const saveRecordGetID = (Model, recordData) => {
+  return new Promise((resolve, reject) => {
+    const newRecord = new Model(recordData);
+    return newRecord.save()
+      .then(record => resolve(record._id))
+      .catch(error => reject(error));
   });
-};
-
-export const createUser = (UserModel, newUserData) => {
-  return createItem(UserModel, newUserData)
-    .then(user => user)
-    .catch(error => error);
 }
 
-export const getUser = (UserModel, queries) => {
-  return UserModel
+export const createAndReturn = (Model, recordData) => {
+  return new Promise((resolve, reject) => {
+    const newRecord = new Model(recordData);
+    return newRecord.save()
+      .then(record => resolve(record))
+      .catch(error => reject(error));
+  });
 }
-
-export const getUserTransactions = () => {
-
-}
-
-export const getUserDataPublic = () => {
-
-}
-
-export const createOrder = () => {
-
-}
-
-export const approveOrder = () => {
-
-}
-
-export const cancelOrder = () => {
-
-}
-
